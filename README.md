@@ -1,4 +1,4 @@
-# Slack AI Engineering Assistant (LM Studio Powered)
+# Slack AI Engineering Assistant
 
 このプロジェクトは、LM Studio上で動作するLLM（Gemma 4 26B A4B）をバックエンドとして使用し、Slack上で最新情報の検索やウェブページの精査ができるエンジニアリング・アシスタント・ボットです。
 
@@ -10,7 +10,7 @@
 
 ## 📋 前提条件
 
-### 1. LM Studio のセットアップ（重要）
+### 1. LM Studioのセットアップ
 
 このボットを動作させるには、LM Studioでモデルがロードされ、サーバーが起動している必要があります。
 
@@ -25,7 +25,7 @@
     * Server Port がデフォルトの 1234 であることを確認します。
     * "Start Server" ボタンをクリックします。
 
-### 2. Slack App の設定
+### 2. Slackアプリの設定
 
 1. [Slack API](https://api.slack.com/apps)で新しいアプリを作成します。
 2. Socket Mode を有効にします。
@@ -39,15 +39,21 @@
     * mpim:history
 5. SLACK_BOT_TOKEN (xoxb-) と SLACK_APP_TOKEN (xapp-) を取得します。
 
+### 3. pyenvのインストール
+Pythonのバージョンを管理するため、[pyenv](https://github.com/pyenv/pyenv)をインストールします。
+
+### 4. Poetryのインストール
+ライブラリのバージョンを管理するため、[Poetry](https://github.com/python-poetry/poetry)をインストールします。
+
 ---
 
 ## 🚀 インストールと実行
 
-### 1. リポジトリのクローンと依存関係のインストール
+### 1. 依存関係のインストール
 
 ```
-# ライブラリのインストール
-pip install lmstudio slack_bolt duckduckgo_search python-dotenv requests beautifulsoup4
+pyenv install
+poetry install
 ```
 
 ### 2. 環境変数の設定
