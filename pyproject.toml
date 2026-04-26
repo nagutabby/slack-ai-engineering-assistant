@@ -1,0 +1,27 @@
+[project]
+name = "slack-ai-engineering-assistant"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "nagutabby",email = "nagutabby@nagutabby.uk"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+lmstudio = "^1.5.0"
+slack-bolt = "^1.28.0"
+python-dotenv = "^1.2.2"
+requests = "^2.33.1"
+beautifulsoup4 = "^4.14.3"
+ddgs = "^9.14.1"
+
