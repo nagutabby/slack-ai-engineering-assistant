@@ -150,7 +150,16 @@ def handle_mention(event, say, client):
 
         answer = clean_text(final_answer[0])
         if answer:
-            say(text=f"<@{user_id}>\n{answer}", thread_ts=thread_ts)
+            say(
+                blocks=[
+                    {
+                        "type": "markdown",
+                        "text": f"<@{user_id}>\n{answer}"
+                    }
+                ],
+                text=f"Reply to <@{user_id}>", # 通知用のプレーンテキスト
+                thread_ts=thread_ts
+            )
             print("📤 Response sent to Slack.")
         else:
             say(text="回答を生成できませんでした。", thread_ts=thread_ts)
