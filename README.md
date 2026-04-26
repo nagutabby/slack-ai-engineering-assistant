@@ -71,7 +71,7 @@ MODEL_ID=google/gemma-4-26b-a4b
 LM Studioのサーバーが起動していることを確認してから、以下のコマンドを実行します。
 
 ```
-python bot.py
+poetry run python bot.py
 ```
 
 ---
